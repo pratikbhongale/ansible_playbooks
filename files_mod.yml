@@ -1,0 +1,15 @@
+- 
+  name: File Modules
+  hosts: servers
+  tasks:
+  - name: Creating a file
+    file:
+      path: /tmp/newfile.txt
+      state: touch   #if you want to delete dir or file just changed the state to absent
+      owner: pratik
+      group: dev
+      mode: u=rwx,g=rw,o=r
+  - name: Creating a directory
+    file:
+      path: /tmp/myfolder
+      state: directory  #if you want to delete dir or file just changed the state to absent
