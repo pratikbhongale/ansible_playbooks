@@ -7,3 +7,7 @@
       src:
         /home/myfile.txt
       dest: /tmp/
+      owner: pratik
+      group: dev
+      mode: ugo=rw #this will give all access to user, group, both etc
+      backup: yes
