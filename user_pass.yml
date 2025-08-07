@@ -1,0 +1,12 @@
+- 
+  name: Set password
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: set paswd
+    user:
+      name: prisha
+      update_password: always 
+      password: "{'abc123' | password_hash('sha512')}"
+      #password have to be in encrypted format 
