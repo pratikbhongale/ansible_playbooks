@@ -1,0 +1,12 @@
+- 
+  name: User Managment
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: User Creation
+    user:
+      name: nick
+      comment: new user adding for worker node
+      home: /home/nick  #it will create a home directory for the user
+      shell: /bin/bash
