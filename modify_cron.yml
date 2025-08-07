@@ -1,0 +1,9 @@
+- 
+  name: Modify Cron
+  hosts: all
+  tasks:
+  - name: Remove Cron Job
+    cron:
+    name: Run test Script   #give the name of the task u want to remove
+    state: absent
+    user: pratik    #for a specific user
