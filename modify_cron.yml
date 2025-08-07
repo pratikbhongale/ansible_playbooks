@@ -7,3 +7,5 @@
     name: Run test Script   #give the name of the task u want to remove
     state: absent
     user: pratik    #for a specific user
+    job: /tmp/script/test.sh  #job is to run this script
+    disabled: yes       #if you want to stop running the script disabled is used
