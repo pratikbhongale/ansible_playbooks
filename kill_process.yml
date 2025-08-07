@@ -5,6 +5,6 @@
 
   tasks:
   - name: Find and kill a process
-    ignore_errors: yes
-    shell: "pgrep nginx | xargs kill"
-
+    ignore_errors: yes  #it will ignore the error when killing a process
+    shell: "pgrep nginx | xargs kill"  #this is a shell cmd to kill a running process
+  
