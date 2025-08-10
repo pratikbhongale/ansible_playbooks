@@ -1,0 +1,11 @@
+- 
+  name: Download files
+  hosts: servers
+  become: yes
+  tasks:
+  - name: Download file
+    get_url:
+      url: https://www.python.org/ftp/python/3.13.6/Python-3.13.6.tar.xz
+      dest: /home/ubuntu/python3
+      mode: 0777
+#we can also mention groups and user
